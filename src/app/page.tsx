@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 /* ── NAV ── */
 const NAV_LINKS = [
@@ -13,14 +14,11 @@ const NAV_LINKS = [
 
 /* ── CARRIERS / INSURANCE ── */
 const CARRIERS = [
-  "Daman",
-  "Thiqa",
-  "AXA (GIG)",
-  "MetLife UAE",
-  "NextCare",
-  "Neuron",
-  "Oman Insurance",
-  "Allianz UAE",
+  { name: "Daman", logo: "/Daman.png" },
+  { name: "MetLife", logo: "/Metlife.png" },
+  { name: "AXA / GIG", logo: "/axa.png" },
+  { name: "Allianz", logo: "/allianz.png" },
+  { name: "Neuron", logo: "/neuron.png" },
 ];
 
 /* ── SERVICES ── */
@@ -284,9 +282,20 @@ export default function Home() {
         <section className="carriers">
           <div className="container">
             <p className="carriers__label">Insurances We Accept</p>
-            <div className="carriers__row">
-              {CARRIERS.map((c) => (
-                <div key={c} className="carrier-chip">{c}</div>
+          </div>
+          <div className="carriers__carousel">
+            <div className="carriers__track">
+              {/* Multiplying to ensure infinite feel */}
+              {[...CARRIERS, ...CARRIERS, ...CARRIERS, ...CARRIERS].map((c, i) => (
+                <div key={`${c.name}-${i}`} className="carrier-logo">
+                  <Image 
+                    src={c.logo} 
+                    alt={c.name} 
+                    width={140} 
+                    height={60} 
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
               ))}
             </div>
           </div>
