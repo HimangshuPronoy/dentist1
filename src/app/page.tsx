@@ -171,7 +171,6 @@ export default function Home() {
       <header className="header" id="home">
         <div className="container header__inner">
           <a href="#home" className="brand">
-            <span className="brand__icon">E</span>
             <div>
               <span className="brand__name">Elite Dental</span>
               <span className="brand__by">Clinic Dubai</span>
@@ -241,7 +240,6 @@ export default function Home() {
             {/* Lead intake card */}
             <div className="lead-card">
               <div className="lead-card__head">
-                <div className="lead-card__avatar">E</div>
                 <div>
                   <p className="lead-card__hi">Expert Dental Care 👋</p>
                   <p className="lead-card__tagline">Let&apos;s achieve your dream smile</p>
@@ -558,7 +556,6 @@ export default function Home() {
         <div className="container footer__inner">
           <div className="footer__brand">
             <a href="#home" className="brand brand--light">
-              <span className="brand__icon">E</span>
               <div>
                 <span className="brand__name">Elite Dental</span>
                 <span className="brand__by">Clinic Dubai</span>
