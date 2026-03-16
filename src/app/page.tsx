@@ -294,8 +294,8 @@ export default function Home() {
                   <Image 
                     src={c.logo} 
                     alt={c.name} 
-                    width={140} 
-                    height={60} 
+                    fill
+                    sizes="140px"
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
@@ -313,6 +313,7 @@ export default function Home() {
                   src="/dental2.jpg" 
                   alt="Elite Dental Clinic Interior" 
                   fill
+                  sizes="(max-width: 768px) 100vw, 380px"
                   style={{ objectFit: 'cover' }}
                   className="about__photo-img"
                 />
