@@ -53,9 +53,9 @@ const SERVICES = [
 const REVIEWS = [
   {
     name: "Aisha R.",
-    location: "Downtown Dubai",
+    location: "Ajman",
     stars: 5,
-    text: "The best dental experience I've had in Dubai. The doctors are incredibly skilled and the clinic feels more like a spa. My veneers look amazing and completely natural!",
+    text: "The best dental experience I've had in Ajman. The doctors are incredibly skilled and the clinic feels more like a spa. My veneers look amazing and completely natural!",
     avatar: "SA",
   },
   {
@@ -144,6 +144,13 @@ export default function Home() {
 
   function handleContact(e: React.FormEvent) {
     e.preventDefault();
+    const whatsappNumber = "+971523248525";
+    const text = `Hello Al Jawahara Dental Clinic, I'm interested in ${form.type || 'a consultation'}.
+Name: ${form.name}
+Phone: ${form.phone}
+Message: ${form.message || 'N/A'}`;
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/${whatsappNumber.replace(/\s+/g, '')}?text=${encodedText}`, '_blank');
     setSubmitted(true);
   }
 
@@ -157,10 +164,10 @@ export default function Home() {
       {/* ══ TOP BAR ══ */}
       <div className="topbar">
         <div className="container topbar__inner">
-          <span>Elite Dental Clinic · Premium Care in Dubai</span>
-          <a href="tel:+97141234567" className="topbar__phone">
+          <span>Al Jawahara Dental Clinic · Premium Care in Ajman</span>
+          <a href="tel:+971523248525" className="topbar__phone">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.56 21 3 13.44 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" /></svg>
-            +971 4 123 4567
+            +971 52 324 8525
           </a>
         </div>
       </div>
@@ -170,8 +177,8 @@ export default function Home() {
         <div className="container header__inner">
           <a href="#home" className="brand">
             <div>
-              <span className="brand__name">Elite Dental</span>
-              <span className="brand__by">Clinic Dubai</span>
+              <span className="brand__name">Al Jawahara</span>
+              <span className="brand__by">Dental Clinic</span>
             </div>
           </a>
 
@@ -206,13 +213,13 @@ export default function Home() {
         <section className="hero">
           <div className="container hero__inner">
             <div className="hero__copy">
-            <div className="hero__pill">✨ World-Class Dentistry · Dubai, UAE</div>
+            <div className="hero__pill">✨ World-Class Dentistry · Ajman, UAE</div>
               <h1 className="hero__h1">
                 Your Perfect Smile<br />
                 <span className="hero__h1-grad">Starts Here.</span>
               </h1>
               <p className="hero__sub">
-                At Elite Dental Clinic, we combine expert artistry with cutting-edge 
+                At Al Jawahara Dental Clinic, we combine expert artistry with cutting-edge 
                 technology to deliver premium dental care. We
                 specialize in transformations that feel as good as they look.
               </p>
@@ -331,7 +338,7 @@ export default function Home() {
               <p className="section-eye">Elite Care</p>
               <h2 className="section-h2">Your health.<br />Your masterpiece.</h2>
               <p>
-                I founded Elite Dental Clinic with a simple mission: to provide the highest 
+                I founded Al Jawahara Dental Clinic with a simple mission: to provide the highest 
                 standard of dental care in a setting that feels professional, clinical, 
                 and yet completely relaxing.
               </p>
@@ -497,9 +504,9 @@ export default function Home() {
                 Fill out the form and I&apos;ll reach out within 24 hours for a free, no-pressure
                 consultation. Rather talk now?
               </p>
-              <a href="tel:+97141234567" className="contact__phone-link">
+              <a href="tel:+971523248525" className="contact__phone-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.56 21 3 13.44 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" /></svg>
-                +971 4 123 4567
+                +971 52 324 8525
               </a>
               <div className="contact__socials">
                 <a href="#" className="contact__social-btn" aria-label="Facebook">
@@ -558,7 +565,7 @@ export default function Home() {
                     <textarea name="message" rows={3} placeholder="Tell me a bit about your situation…" onChange={handleChange} />
                   </div>
                   <button type="submit" className="btn btn--primary form-submit">
-                    Send My Request →
+                    Send My WhatsApp Request →
                   </button>
                   <p className="form-note">100% free. No obligation. No spam.</p>
                 </form>
@@ -574,12 +581,12 @@ export default function Home() {
           <div className="footer__brand">
             <a href="#home" className="brand brand--light">
               <div>
-                <span className="brand__name">Elite Dental</span>
-                <span className="brand__by">Clinic Dubai</span>
+                <span className="brand__name">Al Jawahara</span>
+                <span className="brand__by">Dental Clinic</span>
               </div>
             </a>
             <p className="footer__tagline">
-              Premium dental care in the heart of Dubai. Combining clinical 
+              Premium dental care in the heart of Ajman. Combining clinical 
               expertise with world-class artistry for your perfect smile.
             </p>
           </div>
@@ -600,15 +607,17 @@ export default function Home() {
             </div>
             <div className="footer-col">
               <h4>Contact</h4>
-              <a href="tel:+97141234567">+971 4 123 4567</a>
-              <a href="mailto:hello@elitedentaldubai.com">hello@elite<br />dentaldubai.com</a>
+              <a href="tel:+971523248525">+971 52 324 8525</a>
+              <p className="footer__address" style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', marginTop: '8px', lineHeight: '1.4' }}>
+                besides Tasheel - suite 308 ,Jawhara building - Bank Street Sheikh Khalifa Bin Zayed St - 3 Al Nuaimia - Ajman - UAE
+              </p>
               <span>Mon–Sat · 9am–9pm</span>
             </div>
           </div>
         </div>
 
         <div className="container footer__bottom">
-          <p>© {new Date().getFullYear()} Elite Dental Clinic Dubai. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Al Jawahara Dental Clinic. All rights reserved.</p>
           <div className="footer__legal">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Use</a>

@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Elite Dental Clinic Dubai | Premium Dental Care",
+  title: "Al Jawahara Dental Clinic Ajman | Premium Dental Care",
   description:
-    "Experience premium dental care in Dubai at Elite Dental Clinic. We offer cosmetic dentistry, orthodontics, implants, and general dentistry led by expert clinical specialists.",
+    "Experience premium dental care at Al Jawahara Dental Clinic in Ajman. We offer cosmetic dentistry, orthodontics, implants, and general dentistry led by expert clinical specialists.",
 };
 
 export default function RootLayout({
