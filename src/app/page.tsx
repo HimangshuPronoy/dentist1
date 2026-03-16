@@ -309,9 +309,13 @@ export default function Home() {
           <div className="container about__inner">
             <div className="about__photo">
               <div className="about__photo-frame">
-                <div className="about__photo-placeholder">
-                  <span className="about__photo-initial">D</span>
-                </div>
+                <Image 
+                  src="/dental2.jpg" 
+                  alt="Elite Dental Clinic Interior" 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="about__photo-img"
+                />
               </div>
               <div className="about__card-float">
                 <div className="about__card-float-icon">⭐</div>
