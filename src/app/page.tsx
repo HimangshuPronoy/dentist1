@@ -238,6 +238,9 @@ export default function Home() {
             {/* Lead intake card */}
             <div className="lead-card">
               <div className="lead-card__head">
+                <div className="lead-card__avatar">
+                  <Image src="/dental5.jpg" alt="Clinic Icon" width={40} height={40} />
+                </div>
                 <div>
                   <p className="lead-card__hi">Expert Dental Care 👋</p>
                   <p className="lead-card__tagline">Let&apos;s achieve your dream smile</p>

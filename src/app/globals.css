@@ -334,17 +334,24 @@ img, svg { display: block; max-width: 100%; }
   border-bottom: 1px solid var(--border);
 }
 .lead-card__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 1px;
-  background: linear-gradient(135deg, var(--brand), #0d9488);
-  color: #fff;
-  font-size: 1.35rem;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: var(--surface-alt);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  border: 1px solid var(--border);
+  position: relative;
+  isolation: isolate; /* Fix for some browsers with overflow:hidden and border-radius */
+}
+.lead-card__avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important; /* Enforce circle on image too */
 }
 .lead-card__hi {
   font-size: 0.97rem;
