@@ -506,8 +506,8 @@ img, svg { display: block; max-width: 100%; }
 }
 .about__photo { position: relative; display: flex; justify-content: center; }
 .about__photo-frame {
-  width: 280px;
-  height: 340px;
+  width: 380px;
+  height: 460px;
   border-radius: var(--r-xl);
   overflow: hidden;
   box-shadow: var(--s-lg);
