@@ -218,7 +218,7 @@ export default function Home() {
               </p>
               <div className="hero__actions">
                 <a href="#contact" className="btn btn--primary btn--lg">Book Free Consultation</a>
-                <a href="#about" className="btn btn--ghost-dark btn--lg">Our Services</a>
+                <a href="#about" className="btn btn--outline-light btn--lg">Our Services</a>
               </div>
               <div className="hero__proof">
                 <div className="hero__proof-item">
